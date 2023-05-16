@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- activity_main.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/workoutNameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Workout Name"
+        android:layout_marginBottom="50dp"
+        android:padding="20dp"/>
+
+    <TextView
+        android:id="@+id/workoutTimeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Workout Time"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/workoutNameEditText"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/workoutDurationEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="Enter workout duration (seconds)"
+        android:layout_below="@id/workoutTimeTextView"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/restTimeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rest Time"
+        android:textSize="24sp"
+        android:layout_below="@id/workoutDurationEditText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp" />
+
+    <EditText
+        android:id="@+id/restDurationEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="Enter rest duration (seconds)"
+        android:layout_below="@id/restTimeTextView"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start"
+        android:layout_below="@id/restDurationEditText"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/stopButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stop"
+        android:layout_below="@id/startButton"
+        android:layout_centerHorizontal="true"
+        android:enabled="false" />
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/stopButton"
+        android:layout_marginTop="16dp" />
+
+</RelativeLayout>
